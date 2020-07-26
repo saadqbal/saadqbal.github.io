@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/saadqbal.github.io/static/css/main.280c1cc1.chunk.css",
+    "main.js": "/saadqbal.github.io/static/js/main.1d4a9ed3.chunk.js",
+    "main.js.map": "/saadqbal.github.io/static/js/main.1d4a9ed3.chunk.js.map",
+    "runtime-main.js": "/saadqbal.github.io/static/js/runtime-main.e7ad098e.js",
+    "runtime-main.js.map": "/saadqbal.github.io/static/js/runtime-main.e7ad098e.js.map",
+    "static/js/2.3c78cea8.chunk.js": "/saadqbal.github.io/static/js/2.3c78cea8.chunk.js",
+    "static/js/2.3c78cea8.chunk.js.map": "/saadqbal.github.io/static/js/2.3c78cea8.chunk.js.map",
+    "index.html": "/saadqbal.github.io/index.html",
+    "precache-manifest.3c7019548794d4e07b72a87994414551.js": "/saadqbal.github.io/precache-manifest.3c7019548794d4e07b72a87994414551.js",
+    "service-worker.js": "/saadqbal.github.io/service-worker.js",
+    "static/css/main.280c1cc1.chunk.css.map": "/saadqbal.github.io/static/css/main.280c1cc1.chunk.css.map",
+    "static/js/2.3c78cea8.chunk.js.LICENSE": "/saadqbal.github.io/static/js/2.3c78cea8.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e7ad098e.js",
+    "static/js/2.3c78cea8.chunk.js",
+    "static/css/main.280c1cc1.chunk.css",
+    "static/js/main.1d4a9ed3.chunk.js"
+  ]
+}
