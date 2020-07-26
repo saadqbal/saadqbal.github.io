@@ -10,13 +10,15 @@ import {
   CardTitle,
   CardDescription,
 } from './'
+import { slugify } from "../../../Utils/tools";
 
 export const Card = ({ blog }) => {
   const [labels, setLabels] = useState([]);
   const history = useHistory();
 
   const openBlog = (title, number) => {
-    history.push(`/blog/${title}/${number}`);
+    // slugify: convert the title to slug.
+    history.push(`/blog/${slugify(title)}/${number}`);
   }
 
   useEffect(() => {
