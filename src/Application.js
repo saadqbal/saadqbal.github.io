@@ -32,7 +32,7 @@ const Application = () => {
       <ApolloProvider client={client}>
         <ThemeProvider theme={themeMode} toggleTheme={themeToggler}>
           <GlobalStyles />
-          <Router />
+          <Router theme={themeMode} />
           <Toggle theme={theme} toggleTheme={themeToggler} />
         </ThemeProvider>
       </ApolloProvider>

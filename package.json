@@ -26,6 +26,7 @@
     "react-reactions": "github:randomdipesh/react-reactions",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
+    "react-stackoverflow-card": "^1.0.3",
     "react-syntax-highlighter": "^12.2.1",
     "reading-time": "^1.2.0",
     "styled-components": "^5.0.1"
