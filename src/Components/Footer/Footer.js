@@ -59,12 +59,13 @@ const Footer = ({ theme }) => {
       <div className='footer-right'>
 
         <p className='footer-company-about'>
-          <span>About the company</span>
-		    Web Dev Trick is a blog for web designers, graphic designers, web developers &amp; SEO Learner.
+          <span>My Stackoverfow Profile</span>
         </p>
-
         <StackOverflowProfile id='840186' containerStyle={{ backgroundColor: 'white' }} />
-
+        <p className='footer-company-about footer-links'>
+                  What to use this baadge for your own Stackoverfow Profile?
+          <span><a style={{ fontSize: 14 }} href='https://www.npmjs.com/package/react-stackoverflow-card'>click here</a></span>
+        </p>
       </div>
 
     </footer>
