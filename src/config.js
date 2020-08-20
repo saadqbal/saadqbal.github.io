@@ -20,6 +20,9 @@ export const config = {
   // Your Personal Blog Subtitle
   subtitle: 'Full Stack Developer',
 
+  // write a few lines about yourself
+  aboutMe: 'A software engineer. Full Stack developer',
+
   // Header customization
   header: {
     backgroundColor: '#f1f6f8', // can be a CSS gradient
@@ -36,6 +39,17 @@ export const config = {
     titleColor: '#ff5252',
     titleColorDark: '#16a085',
     subtitleColor: '#37474f',
-    subtitleColorDark: '#D8DEE9'
+    subtitleColorDark: '#D8DEE9',
+    stackOverflowId: 840186,
+    contact: {
+      title: 'Hire Me',
+      phone: '+923348442426',
+      email: 'asad.dsoft@gmail.com',
+      facebook: '',
+      linkedin: '',
+      twitter: 'saadqbal',
+      github: 'saadqbal'
+    },
+    copyright: `copyright © 2020. All rights reserved.`
   }
 }

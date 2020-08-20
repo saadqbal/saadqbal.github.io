@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { StackOverflowProfile } from 'react-stackoverflow-card'
-import { config } from '../../config'
 import 'react-stackoverflow-card/dist/index.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookF, faTwitter, faLinkedinIn, faGithubAlt } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope, faAddressCard } from '@fortawesome/free-regular-svg-icons'
+import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
+import { config } from '../../config'
 
-const { backgroundColor, backgroundColorDark, titleColor, titleColorDark } = config.footer
+const { backgroundColor, backgroundColorDark, titleColor, titleColorDark, stackOverflowId, contact, copyright } = config.footer
+const { phone, email, facebook, twitter, linkedin, github } = contact
 
 const Footer = ({ theme }) => {
   const [bg, setBg] = useState(theme.mode === 'light' ? backgroundColor : null)
@@ -18,7 +23,10 @@ const Footer = ({ theme }) => {
   return (
     <footer className='footer-distributed' style={{ backgroundColor: bg }}>
       <div className='footer-left'>
-        <h3 style={{ color: titleTextColor }}>Asad <span>Iqbal</span></h3>
+        <h3 style={{ color: titleTextColor }}>{config.title}</h3>
+        <h5>{config.subtitle}</h5>
+        <p className='footer-company-about'>{config.aboutMe}</p>
+
         <p className='footer-links'>
           <a href='/'>Home</a>
           <a href='#'>Blog</a>
@@ -27,48 +35,45 @@ const Footer = ({ theme }) => {
           <a href='#'>Faq</a>
           <a href='#'>Contact</a>
         </p>
-        <p className='footer-company-name'>saadqbal &copy; 2019</p>
+
       </div>
 
       <div className='footer-center'>
-
         <div>
-          <i className='fa fa-map-marker' />
-          <p><span>Hire Me</span></p>
+          <p><FontAwesomeIcon icon={faAddressCard} /> {contact.title}</p>
         </div>
 
-        <div>
-          <i className='fa fa-phone' />
-          <p>+92 334 8442426</p>
-        </div>
-
-        <div>
-          <i className='fa fa-envelope' />
-          <p><a href='mailto:asad.dsoft@gmail.com'>asad.dsoft@gmail.com</a></p>
-        </div>
+        {phone ? <div>
+          <p><FontAwesomeIcon icon={faPhoneAlt} /> <a href='tel:+923348442426'>+92 334 8442426</a></p>
+        </div> : null }
+        {email ? <div>
+          <p><FontAwesomeIcon icon={faEnvelope} /> <a href='mailto:asad.dsoft@gmail.com'>asad.dsoft@gmail.com</a></p>
+        </div> : null }
         <div>
           <div className='footer-icons'>
-            <a href='#'><i className='fa fa-facebook' /></a>
-            <a href='#'><i className='fa fa-twitter' /></a>
-            <a href='#'><i className='fa fa-linkedin' /></a>
-            <a href='#'><i className='fa fa-github' /></a>
+            { facebook ? <a target='_blank' href={`https://facebook.com/${facebook}`}><FontAwesomeIcon icon={faFacebookF} /></a> : null }
+            { twitter ? <a target='_blank' href={`https://twitter.com/${twitter}`}><FontAwesomeIcon icon={faTwitter} /></a> : null }
+            { linkedin ? <a target='_blank' href={`https://www.linkedin.com/in/${linkedin}`}><FontAwesomeIcon icon={faLinkedinIn} /></a> : null }
+            { github ? <a target='_blank' href={`http://github.com/${github}`}><FontAwesomeIcon icon={faGithubAlt} /></a> : null }
           </div>
         </div>
       </div>
 
       <div className='footer-right'>
-
         <p className='footer-company-about'>
           <span>My Stackoverfow Profile</span>
         </p>
-        <StackOverflowProfile id='840186' containerStyle={{ backgroundColor: 'white' }} />
+        <StackOverflowProfile id={stackOverflowId} containerStyle={{ backgroundColor: 'white' }} />
         <p className='footer-company-about footer-links'>
-                  What to use this baadge for your own Stackoverfow Profile?
+                  Want to use this badge for your own Stackoverfow Profile?
           <span><a style={{ fontSize: 14 }} href='https://www.npmjs.com/package/react-stackoverflow-card'>click here</a></span>
         </p>
       </div>
-
+      <div style={{ borderTop: '1px solid #ccc', padding: '8px' }}>
+        <p className='footer-company-name'>{copyright}</p>
+      </div>
     </footer>
+
   )
 }
 
