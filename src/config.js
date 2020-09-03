@@ -44,7 +44,7 @@ export const config = {
     contact: {
       title: 'Hire Me',
       phone: '+923348442426',
-      email: 'asad.dsoft@gmail.com',
+      email: 'software.lord@gmail.com',
       facebook: '',
       linkedin: '',
       twitter: 'saadqbal',
