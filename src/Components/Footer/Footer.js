@@ -44,10 +44,10 @@ const Footer = ({ theme }) => {
         </div>
 
         {phone ? <div>
-          <p><FontAwesomeIcon icon={faPhoneAlt} /> <a href='tel:+923348442426'>+92 334 8442426</a></p>
+          <p><FontAwesomeIcon icon={faPhoneAlt} /> <a href={`tel:${phone}`}>{phone}</a></p>
         </div> : null }
         {email ? <div>
-          <p><FontAwesomeIcon icon={faEnvelope} /> <a href='mailto:asad.dsoft@gmail.com'>asad.dsoft@gmail.com</a></p>
+          <p><FontAwesomeIcon icon={faEnvelope} /> <a href={`mailto:${email}`}>{email}</a></p>
         </div> : null }
         <div>
           <div className='footer-icons'>
