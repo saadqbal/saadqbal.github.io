@@ -36,7 +36,7 @@
     "deploy-project": "gh-pages -d build",
     "deploy-user": "gh-pages -b master -d build",
     "start": "react-scripts start",
-    "build": "react-scripts build && cp ./CNAME ./build/CNAME && cp -R build docs",
+    "build": "react-scripts build && cp ./CNAME ./build/CNAME && rm -rf docs && cp -R build docs",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
