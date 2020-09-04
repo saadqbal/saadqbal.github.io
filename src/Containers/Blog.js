@@ -12,7 +12,7 @@ const GET_POSTS = gql`
 {
   repository(owner: "${config.githubUserName}", name: "${config.githubRepo}") {
     description,
-    issues(first: 100, states: OPEN, filterBy: { labels: "blog" }) {
+    issues(first: 100, orderBy: {field: CREATED_AT, direction: DESC}, states: OPEN, filterBy: { labels: "blog" }) {
       nodes {
         title
         body
@@ -51,7 +51,6 @@ const Blog = () => {
 
       if (data) {
         setPosts(data?.repository?.issues?.nodes)
-        console.log("DATA", data)
       }
     }
   }, [loading, error, data]);
