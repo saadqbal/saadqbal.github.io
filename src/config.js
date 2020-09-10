@@ -1,6 +1,6 @@
 export const config = {
   // Your Github Converted Token To Know How To Get Your Token Look at Readme.md
-  githubConvertedToken: 'MDU1MmMwYjgyYmJlZDU0ZDc5OTRmMWU5ODRjMjBmMWIyOTYyMGE3Mg==',
+  githubConvertedToken: process.env.REACT_APP_GITHUB_TOKEN,
 
   // Your Github UserName
   githubUserName: 'saadqbal',
@@ -11,8 +11,8 @@ export const config = {
   // Set it to true if you have a Github app to add to this project
   // and fill the client ID & secret
   enableOAuth: true,
-  OAuthClientID: 'Iv1.839ea0c1e669ac77',
-  OAuthSecret: 'a6a9d2419fbb048819150ce5d8eb61f49cf00f26',
+  OAuthClientID: process.env.REACT_APP_GITHUB_CLIENT_ID,
+  OAuthSecret: process.env.REACT_APP_GITHUB_SECRET,
 
   // Your Personal Blog Title
   title: 'Asad Iqbal',
