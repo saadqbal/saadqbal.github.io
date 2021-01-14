@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'	
 
 import Blog from './Containers/Blog'
 import BlogPost from './Containers/BlogPost'
@@ -9,13 +9,13 @@ const history = createBrowserHistory()
 
 const RouterCom = ({ theme }) => {
   return (
-    <HashRouter history={history}>
+    <Router history={history}>
       <Switch>
         <Route exact path='/' component={Blog} />
         <Route exact path='/blog/:title/:issueNumber' component={BlogPost} />
       </Switch>
       <Footer theme={theme} />
-    </HashRouter>
+    </Router>
   )
 }
 
