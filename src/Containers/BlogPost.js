@@ -6,6 +6,8 @@ import { GithubSelector, GithubCounter } from "react-reactions";
 import { userClient } from '../Utils/apollo'
 import { gql } from "apollo-boost";
 import { useQuery } from "@apollo/react-hooks";
+import { DiscussionEmbed } from 'disqus-react';
+
 
 import { config } from "../config";
 import { getEmojiByName, getNameByEmoji } from '../Utils/emoji';
@@ -213,6 +215,17 @@ export default function BlogHome() {
             onAdd={() => setReactionPopup(!reactionPopup)}
           />
           <CommentsSection postUrl={post.url} comments={postComments} />
+          <DiscussionEmbed
+            shortname='saadqbal'
+            config={
+              {
+                url: post.url,
+                identifier: 'post-' + issueNumber,
+                title: post.title,
+                language: 'en_US' //e.g. for Traditional Chinese (Taiwan)	
+              }
+            }
+          />
         </PostContainer>
       )}
     </>
